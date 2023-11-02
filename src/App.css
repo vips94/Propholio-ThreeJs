@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+#root{
+  width: 100vw;
+  height: 100vh;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen{
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.section{
+  padding: 0 10vw;
+  width: 100vw;
+  height: 100vh;  
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.bio h1, .skills h1, .contact h1{
+  font-size: 1.9vw;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bio h4, .skills h4, .contact h4{
+  font-size: 1vw;
+  line-height: 1;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+
+.bio p, .skills p, .contact p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1vw;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.bio ul, .skills ul{
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  list-style: none;
+  padding-inline-start: 5px;
+}
+
+.bio ul li, .skills ul li{
+  font-size: 1.5rem;
+  line-height: 1;
+
+}
+
+.arrowDown{
+  margin-top: 2rem !important;
+  animation-name: arrow-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-bounce {
+  0%{
+    transform: translateY(0);
+  }
+  70%{
+    transform: translateY(16px);
+  }
+  100%{
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bio{
+  justify-content: flex-start;
+}
+
+.skills{
+  justify-content: flex-end;
+}
+
+.contact{
+  justify-content: flex-start;
+}
+
+.contact p{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #d3d3d3;
+  height: 50px;
+  border-radius: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact a{
+  padding-left: 0.6rem;
+  text-decoration: none;
 }
